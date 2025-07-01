@@ -1,0 +1,20 @@
+import turtle as t
+import random
+t.colormode(255)
+#rgb calculator to make own color
+def new_color():
+    r=random.randint(0,255)
+    g=random.randint(0,255)
+    b=random.randint(0,255)
+    color=(r,g,b)
+    return color
+direction=[0,90,180,270,360]
+t.speed("fastest")
+for i in range(200):
+    t.forward(30)
+    t.setheading(random.choice(direction))
+    t.color(new_color())
+    t.width(8)
+    t.pendown()
+    t.forward(5)
+ 
