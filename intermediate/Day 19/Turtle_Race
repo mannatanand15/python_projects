@@ -1,0 +1,40 @@
+# project name:Turtle_race
+# functions used: Setup() Set the size and position of the main window
+
+from turtle import Turtle, Screen
+import random
+screen = Screen()
+is_race_on = False
+screen.setup(width=500,height=400)     #keyword arguments preffered over positional
+guess=screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Enter a color.")
+all_turtles=[]
+#to make sure the code doesn't start until user has made a bet
+
+#now we can't define turtle as tim as multiple turtles are there
+if guess:
+    is_race_on = True
+colors=["violet","indigo","blue","green","orange","red"]
+y_position=[-100,-60,-20,20,60,100]
+print(guess)
+for i in range(0,6):
+    new_turtle = Turtle(shape="turtle")
+    new_turtle.penup()
+    new_turtle.goto(x=-220, y=y_position[i])
+    new_turtle.color(colors[i])
+    all_turtles.append(new_turtle)
+
+#making the turtle move randomly
+while is_race_on:
+    for turtle in all_turtles:
+        rand_distance=random.randint(0,10)
+        turtle.forward(rand_distance)
+    for turtle in all_turtles:
+        if turtle.xcor() > 230:
+            is_race_on = False
+            winner=turtle.pencolor()
+            if winner==guess:
+                print(f"you have won.The winner is {winner}")
+            else:
+                print(f"you lose. The winner is {winner}")
+screen.exitonclick()
+
