@@ -1,0 +1,29 @@
+#project name:Etch_a_sketch
+#higher order functions: a function that takes another function as input
+from turtle import Turtle, Screen
+tim=Turtle()
+screen=Screen()
+
+def move_forward():
+    tim.forward(10)
+def move_backward():
+    tim.backward(10)
+def left():
+    tim.left(10)
+def right():
+    tim.right(10)
+def clear():
+    tim.clear()
+    tim.penup()
+    tim.home()
+    tim.pendown()
+
+screen.listen()
+screen.onkey(key="W",fun=move_forward)
+screen.onkey(key="S",fun=move_backward)
+screen.onkey(key="A",fun=left)
+screen.onkey(key="D",fun=right)
+screen.onkey(key="c",fun=clear)
+
+screen.exitonclick()
+
