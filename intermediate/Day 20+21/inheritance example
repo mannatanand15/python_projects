@@ -1,0 +1,18 @@
+#INHERITANCE- allows new class to inherit function from already existing classes
+  class Animal:
+    def __init__(self):
+        self.num_eyes=2
+
+    def breathe(self):
+        print("inhale,exhale")
+
+class Fish(Animal):      #fish class will inherit features from animal class
+    def __init__(self):
+        super().__init__()      #animal class will act as SUPERCLASS
+
+    def breathe(self):
+        super().breathe()     #we can modify the animal class 
+        print("underwater")
+
+    def swim(self):
+        print("moving in water")
