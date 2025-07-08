@@ -1,0 +1,35 @@
+Day-24 
+  ⭐️ TODO1 -> Project: opening and closing of file
+file=open("add name of file",mode='w')
+##this will open the file and store it in the file variable,to read through the file.by default set to read only mode
+conents=read("file name")
+file.close()
+##important to close the file to avoid it from occupying space.to not close it sepately we can use the with keyword
+with open("file name",mode='w') as file:
+    file.write("new text")
+#files store information in forms of strings only.
+mode='r' -> Read only mode
+ ⭐️  TODO 2:FILE PATH
+right click on the file and check properties to get exact location of file
+The file paths for these might look like:
+
+Root: /
+Work folder: /work
+Report document: /work/report.doc
+Project folder: /work/project
+Talk PowerPoint: /work/project/talk.ppt
+
+Windows: C:\Users\LondonAppBrewery\Desktop\new_file.txt   {backslash}
+Mac: /Users/Angela/Desktop/my_file.txt      {forward slash}
+
+⭐️ TODO 3: RELATIVE PATH AND ABSOLUTE PATH
+RELATIVE PATH- gives the address of the file with respect to main file. some symbols are as follows:
+. -> current folder
+.. -> go up one folder
+ABSOLUTE PATH- gives exact address from the root (except root)
+ ⭐️  TODO 4: MAIL MERGE
+readlines() method  -- Return all lines in the file, as a list where each line is an item in the list object
+replace() method -- replaces a specified phrase with another specified phrase.
+strip() method--Remove spaces at the beginning and at the end of the string:
+
+
