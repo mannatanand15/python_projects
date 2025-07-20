@@ -1,0 +1,29 @@
+Topic: using usv files and also using pandas library DATAFRAMES
+-> DATAFRAMES- the complete table 
+->SERIES- one row of a table
+
+import csv
+temperature=[]   #creating an empty list
+with open ("weather_data.csv") as data_file:
+    data=csv.reader(data_file)
+    for row in data:
+        if row[1] != "temp":
+            print(row[1])
+
+
+
+data=pandas.read_csv("weather_data.csv")
+print(type(data))
+print(data["temp"])
+data.dict = data.to_dict()
+print(data.dict)
+print(data["temp"].mean())
+
+# to get data in columns we must specify the correct name of the column
+print (data["condition"])
+print(data.condition)   #both will work the same
+
+# get data in same row
+import pandas
+data=pandas.read_csv("2018_Central_Park_Squirrel_census.csv")
+print(data)
