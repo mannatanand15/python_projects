@@ -1,0 +1,26 @@
+len function is used to find the length of strings and not the length of integers.
+subscripting-refers to the counting of strings using index
+subscripting can be done using negative index also
+
+print("123"+"345)  # 123345
+print(123+345)   #will add the numbers becoz it considers it as integers
+to print large numbers we don't add commas but we add _ in place of it
+
+division operator:
+(/) is used to divide and give float as the output
+(//) is used to divide and give integer as the output
+
+multiplication operator:
+* used to multiply
+** used to raise the number to the power [2**3]-> output[8]
+round function is used to roundoff the number
+
+FOR SELECTING ANY RANDOM NUMBER
+import random
+ random.randint   ->for importing a random integer 
+random.random  -> for importing a random floating point number
+random.uniform(1,10)  -> for importing a random floating number inclusing 1 and 10
+import random
+coin=["heads","tails"]
+a=random.randint(0,1) #index between numbers 0 and 1
+print(coin[a])
