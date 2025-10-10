@@ -14,6 +14,6 @@ with open ("./input/letters/starting_letter.txt") as letter_file:
       # to print the output files in the same folder.
         with open(f"./output/readytosend/letter_for {stripped_name}.docx",'w') as complete_letter:
             complete_letter.write(new_letter)
-        print(new_letter)
+        print(new_letter) 
 
 #for loop to read every name in the list
