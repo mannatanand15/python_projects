@@ -23,7 +23,8 @@ print(data["temp"].mean())
 print (data["condition"])
 print(data.condition)   #both will work the same
 
-# get data in same row
+# get data in same row 
 import pandas
 data=pandas.read_csv("2018_Central_Park_Squirrel_census.csv")
 print(data)
+
